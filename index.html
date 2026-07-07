@@ -1,274 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Carter | Portfolio</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    color:#333;
-}
-
-header{
-    background:#0d6efd;
-    color:white;
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
-
-.hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#0d6efd,#6f42c1);
-    color:white;
-}
-
-.hero h1{
-    font-size:55px;
-}
-
-.hero p{
-    margin:20px 0;
-    font-size:20px;
-}
-
-button{
-    padding:12px 25px;
-    border:none;
-    background:#fff;
-    color:#0d6efd;
-    font-size:18px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-section{
-    padding:60px 50px;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.about{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
-}
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:20px;
-}
-
-.skill{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.project{
-    background:white;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.project h3{
-    margin-bottom:10px;
-}
-
-.contact{
-    text-align:center;
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-.dark{
-    background:#121212;
-    color:white;
-}
-
-.dark .skill,
-.dark .project{
-    background:#1f1f1f;
-    color:white;
-}
-
-.dark footer{
-    background:#000;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagasree Velpula - Resume</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h2>Alex Carter</h2>
+    <div class="resume-container">
+        <header>
+            <h1>Nagasree Velpula</h1>
+            <p>
+                Phone: 8247507103 |
+                Email: nagasreevelpula123@gmail.com |
+                Location: Pulivendula, Andhra Pradesh
+            </p>
+        </header>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Motivated B.Tech student with a strong interest in building a career at Flipkart.
+                Skilled in Python, Microsoft Office, and communication, with hands-on academic
+                project experience. Eager to contribute, learn quickly, and grow in a dynamic
+                work environment.
+            </p>
+        </section>
 
-<section class="hero">
-<div>
-<h1>Hello, I'm Alex Carter</h1>
-<p>Frontend Web Developer & UI Designer</p>
+        <section>
+            <h2>Education</h2>
+            <h3>Bachelor of Technology (B.Tech)</h3>
+            <p>
+                GITAMW College<br>
+                Expected Graduation: 2028<br>
+                Percentage: 78.44%
+            </p>
+        </section>
 
-<button onclick="toggleTheme()">Toggle Theme</button>
-</div>
-</section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Microsoft Office</li>
+                <li>Communication Skills</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+            </ul>
+        </section>
 
-<section id="about">
-<h2>About Me</h2>
+        <section>
+            <h2>Academic Project</h2>
+            <h3>Automatic Sanitization Chamber</h3>
+            <ul>
+                <li>Designed and developed an automatic sanitization chamber.</li>
+                <li>Focused on improving hygiene through automated sanitization.</li>
+                <li>Participated in planning, implementation, and testing.</li>
+            </ul>
+        </section>
 
-<div class="about">
-<p>
-I'm a passionate frontend developer with 4+ years of experience creating
-beautiful and responsive websites. I enjoy building modern user interfaces
-using HTML, CSS, JavaScript, and React.
-</p>
-</div>
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Data Science Certification</li>
+            </ul>
+        </section>
 
-</section>
+        <section>
+            <h2>Work Experience</h2>
+            <p>Fresher</p>
+        </section>
 
-<section id="skills">
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+                <li>Hindi</li>
+            </ul>
+        </section>
 
-<h2>Skills</h2>
+        <button onclick="downloadResume()">Download Resume</button>
 
-<div class="skills">
+    </div>
 
-<div class="skill">HTML5</div>
-
-<div class="skill">CSS3</div>
-
-<div class="skill">JavaScript</div>
-
-<div class="skill">React</div>
-
-<div class="skill">Bootstrap</div>
-
-<div class="skill">Git</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>E-Commerce Store</h3>
-<p>Responsive online shopping website with cart functionality.</p>
-</div>
-
-<div class="project">
-<h3>Weather App</h3>
-<p>Weather forecast application using a public API.</p>
-</div>
-
-<div class="project">
-<h3>Task Manager</h3>
-<p>Productivity app for managing daily tasks efficiently.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact">
-
-<p><strong>Email:</strong> alex.carter@example.com</p>
-
-<p><strong>Phone:</strong> +1 (555) 123-4567</p>
-
-<p><strong>Location:</strong> Seattle, Washington, USA</p>
-
-<br>
-
-<button onclick="showMessage()">Hire Me</button>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Alex Carter. All Rights Reserved.</p>
-
-</footer>
-
-<script>
-function showMessage() {
-    alert("Thank you for visiting my portfolio! I will get back to you soon.");
-}
-
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-}
-
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const section = document.querySelector(this.getAttribute('href'));
-
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
+    <script src="script.js"></script>
 
 </body>
 </html>
