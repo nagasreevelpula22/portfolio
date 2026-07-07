@@ -1,84 +1,114 @@
-// ================================
-// Portfolio JavaScript
-// ================================
-
-// Toggle Dark Mode
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-
-    // Save theme preference
-    if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-    } else {
-        localStorage.setItem("theme", "light");
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-// Load saved theme
-window.addEventListener("load", () => {
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-    }
-});
-
-// Hire Me Button
-function showMessage() {
-    alert("Thank you for visiting my portfolio!\n\nYou can contact me at:\nalex.carter@example.com");
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
 }
 
-// Smooth Scrolling
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
+header{
+    background:#0b5ed7;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
 
-        const target = document.querySelector(this.getAttribute('href'));
+header h1{
+    font-size:40px;
+}
 
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
+header p{
+    font-size:20px;
+    margin-top:10px;
+}
 
-// Highlight Active Navigation Link
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+nav{
+    background:#003566;
+}
 
-window.addEventListener("scroll", () => {
-    let current = "";
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
+nav ul li{
+    margin:15px;
+}
 
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-    navLinks.forEach(link => {
-        link.style.color = "white";
+nav ul li a:hover{
+    color:#ffd60a;
+}
 
-        if (link.getAttribute("href") === "#" + current) {
-            link.style.color = "#ffd54f";
-        }
-    });
-});
+section{
+    width:80%;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
 
-// Fade-in Animation on Scroll
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-});
+section h2{
+    color:#0b5ed7;
+    margin-bottom:15px;
+}
 
-document.querySelectorAll(".skill, .project").forEach(item => {
-    item.style.opacity = "0";
-    item.style.transform = "translateY(40px)";
-    item.style.transition = "all 0.6s ease";
+section h3{
+    margin-bottom:10px;
+}
 
-    observer.observe(item);
-});
+ul{
+    margin-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+a{
+    color:#0b5ed7;
+}
+
+footer{
+    background:#003566;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+section{
+    width:95%;
+}
+
+header h1{
+    font-size:30px;
+}
+
+}
